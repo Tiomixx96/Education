@@ -1,0 +1,77 @@
+/* {
+  border: 4px solid violet;
+} */
+
+/* Обращаемся к какому-то конкретному элементу ребенка */
+/* .main-section > h1 {
+  border: 4px solid violet;
+
+} */
+
+/* Чаще всего используется подход через классы. Определяем класс <h1 class="main-header"> и обращаемся через .main-header */
+/* Почему-то копировало из фигмы background color, но что-бы текст отображался белым нужно было прописать color */
+
+/* focus это когда мы используем клаву для навигации и меняем при этом что-то при выделении или по клику на кнопку. Пока не кликнешь не по элементу. 
+Фокус обычно используется для полей ввода*/
+
+/* .button:focus {
+  background-color: pink;
+} */
+
+/* Каскадность - механизм, который управляет конечными значениями свойст элемента, если к нему применяется несколько цсс правил. ТОЕСТЬ КТО ПОСЛЕДНИЙ - ТОТ И ВЫИГРЫВАЕТ!  
+- если к элементу применяется несколько правил то их свойства комбинируются
+- если правила имеют одинаковые свойства с разными значениями, то они конфликтуют.
+*/
+
+/* убираем кружочки и вообще перечисление для UL элементов всех */
+
+:root {
+  --color-brand-light: #819b57; /* HEX color value */ /* еще используется rgba где 4 парамента, последний прозрачность показівает 0/1. Используется на практике хекс и ргба */
+  --color-primary-white: #faf4ea;
+  --color-primary-dark: #31261a;
+  --color-brand-dark: #465929;
+}
+
+/* GLOBAL STYLES */
+ul {
+  list-style-type: none;
+}
+
+/* LINK  */
+.button {
+  color: var(--color-primary-white);
+  background-color: var(--color-brand-light);
+  border: 2px solid var(--color-brand-light);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: transparent;
+  color: var(--color-brand-dark);
+}
+
+.link {
+  color: var(--color-primary-white);
+}
+.link:hover {
+  color: var(--color-brand-light);
+}
+
+/* HERO SECTION */
+.hero-title {
+  color: var(--color-primary-white);
+}
+.hero-title .accent {
+  color: var(--color-brand-light);
+}
+
+/* advantages section */
+.advantages-list {
+  color: var(--color-primary-white);
+  background-color: var(--color-brand-light);
+}
+
+.section-title {
+  color: var(--color-primary-dark);
+}

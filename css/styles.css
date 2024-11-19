@@ -25,11 +25,54 @@
 
 /* убираем кружочки и вообще перечисление для UL элементов всех */
 
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/poppins-v21-latin-300.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/poppins-v21-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/poppins-v21-latin-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/poppins-v21-latin-900.woff2") format("woff2");
+}
+
 :root {
   --color-brand-light: #819b57; /* HEX color value */ /* еще используется rgba где 4 парамента, последний прозрачность показівает 0/1. Используется на практике хекс и ргба */
   --color-primary-white: #faf4ea;
   --color-primary-dark: #31261a;
   --color-brand-dark: #465929;
+}
+address {
+  font-style: normal;
+}
+
+body {
+  color: var(--color-primary-dark);
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5; /*Задаем коэфициентом, а не пикселями. Тоесть тут мы поделили 27рх на 18рх размер шрифта и получили 1.5. Задали в боди потому что это доминантное значение на страничке */
 }
 
 /* GLOBAL STYLES */
@@ -40,6 +83,7 @@ ul {
 /* LINK  */
 .button {
   color: var(--color-primary-white);
+  font-weight: 600;
   background-color: var(--color-brand-light);
   border: 2px solid var(--color-brand-light);
   border-radius: 8px;
@@ -53,15 +97,27 @@ ul {
 
 .link {
   color: var(--color-primary-white);
+  text-decoration: none;
+  line-height: 1.5;
 }
 .link:hover {
   color: var(--color-brand-light);
+  font-weight: 600;
 }
 
 /* HERO SECTION */
 .hero-title {
   color: var(--color-primary-white);
+  text-decoration: none;
+  text-align: center; /* заголовок будет по центру слева или справа */
+  font-size: 128px;
+  font-weight: 900;
+  /* text-transform: uppercase; Разный регистр. lowercase , capitalize - каждое слово с большой буквы */
+  /* text-shadow: 2px 2px 0px violet;   добавляет размытость тексту x,y,размытость, цвет */
+  /* letter-spacing: 0px;  расстояние между буквами*/
+  /* word-spacing: -10px; расстояние между словами */
 }
+
 .hero-title .accent {
   color: var(--color-brand-light);
 }
@@ -72,6 +128,65 @@ ul {
   background-color: var(--color-brand-light);
 }
 
+.adventages-item {
+  font-size: 20px;
+  font-weight: 300;
+}
+
 .section-title {
-  color: var(--color-primary-dark);
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1.3;
+}
+
+.section-title .accent {
+  color: var(--color-brand-dark);
+}
+
+/* Traditions Section */
+
+/* white-space: nowrap;  помешает текст в один рядок без пепреносов*/
+.traditions-text .brand {
+  color: var(--color-brand-light);
+  font-weight: 600;
+}
+
+.traditions-text .uppercase {
+  text-transform: uppercase;
+}
+
+/* chefs Section*/
+
+.chef-title {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+/* Format Section */
+
+.format-title {
+  font-weight: 600;
+  font-size: 24px;
+}
+.format-text {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+/* ADdress */
+
+.address-link {
+  color: var(--color-primary-white);
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none; /* Убирает подчеркивания например на ссілках*/
+}
+
+.address-link:hover {
+  color: var(--color-brand-light);
+}
+
+.address-copyright {
+  font-size: 14px;
+  color: #a18268;
 }

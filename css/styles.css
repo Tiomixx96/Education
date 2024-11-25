@@ -67,21 +67,60 @@ address {
   font-style: normal;
 }
 
+/* Base */
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: var(--color-primary-dark);
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-weight: 400;
-  line-height: 1.5; /*Задаем коэфициентом, а не пикселями. Тоесть тут мы поделили 27рх на 18рх размер шрифта и получили 1.5. Задали в боди потому что это доминантное значение на страничке */
+  /*Задаем коэфициентом, а не пикселями. Тоесть тут мы поделили 27рх на 18рх размер шрифта и получили 1.5. Задали в боди потому что это доминантное значение на страничке */
+  line-height: 1.5;
+  /* background-color: darkgray; */
+  margin: 0px;
 }
 
+/*Браузер автоматически добавляет марджины и мы их с помощью этого убираем
+Почему только топ? Потому что это как паттерн и иногда нам нужен автоматический bottom*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+.section {
+  padding: 48px 0px;
+}
 /* GLOBAL STYLES */
 ul {
   list-style-type: none;
 }
 
+.hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 24px;
+}
 /* LINK  */
 .button {
+  padding: 16px 32px;
   color: var(--color-primary-white);
   font-weight: 600;
   background-color: var(--color-brand-light);
@@ -106,7 +145,12 @@ ul {
 }
 
 /* HERO SECTION */
+.hero-section {
+  padding: 272px 0px;
+}
+
 .hero-title {
+  margin-bottom: 0px;
   color: var(--color-primary-white);
   text-decoration: none;
   text-align: center; /* заголовок будет по центру слева или справа */
@@ -144,6 +188,12 @@ ul {
 }
 
 /* Traditions Section */
+.traditions-section {
+  padding-top: 96px;
+}
+.traditions-title {
+  margin-bottom: 42px;
+}
 
 /* white-space: nowrap;  помешает текст в один рядок без пепреносов*/
 .traditions-text .brand {
@@ -156,14 +206,20 @@ ul {
 }
 
 /* chefs Section*/
+.chefs-title {
+  margin-bottom: 80px;
+}
 
 .chef-title {
+  margin-bottom: 16px;
   font-weight: 600;
   font-size: 40px;
 }
 
 /* Format Section */
-
+.formats-title {
+  margin-bottom: 80px;
+}
 .format-title {
   font-weight: 600;
   font-size: 24px;
@@ -173,6 +229,10 @@ ul {
   font-size: 14px;
 }
 
+/* Contact Section */
+.contact-title {
+  margin-bottom: 16px;
+}
 /* ADdress */
 
 .address-link {

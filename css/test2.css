@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row; /*Расположение элементов. По умолчанию row, можно использовать column*/
+  justify-content: center; /*Размещение элементов с одинаковым расстоянием. Выравнивает по main axis*/
+  align-items: center;
+  flex-wrap: wrap; /*Используем, чтобі переместить элементы на новый рядок если их слишком много.Чтобы они не меняли свои свойства.*/
+}
+
+.item {
+  flex-basis: 100px; /* Лучше использовать чем width, так как она более гнучка*/
+  height: 100px;
+  background-color: burlywood;
+  padding: 10px;
+  border: 6px solid darkred;
+  margin: 10px;
+}
+
+.item:nth-child(2) {
+  order: 4;
+  flex-basis: 50px;
+  height: 40px;
+  align-self: end; /*Тоже, что и align-items только управляет одним элементом.*/
+}
+
+/* 
+.item:nth-child(2) {
+  flex-grow: 0; flex-grow - Это свойство означает, как будет вести себя элемент если в контейнере есть свободное место.
+  flex-shrink: 0; Со значением 0 не дает сжимать элеменнт при уменьшении экрана. Тоесть размер его фиксированным остается*/

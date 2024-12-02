@@ -70,7 +70,9 @@ address {
 }
 
 /* Base */
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -97,7 +99,11 @@ h6,
 p {
   margin-top: 0;
 }
-
+/* Задаем для всех ссылок чтобы кликабельная зона элемента 
+была равна элементу на котором располагается */
+a {
+  display: inline-block;
+}
 .section {
   padding: 48px 0px;
 }
@@ -253,14 +259,10 @@ ul {
 }
 
 /* chefs Section*/
+
 .chefs-title {
   max-width: 520px;
   margin: 0 auto 80px;
-}
-.chef-image {
-  border-radius: 4px 4px 4px 200px;
-  box-shadow: -16px 16px 0 0 var(--color-primary-light),
-    -16px 16px 0 2px var(--color-secondary-dark);
 }
 
 .chefs-title::before,
@@ -271,13 +273,48 @@ ul {
   content: "";
 }
 
+.chefs-list {
+  display: flex;
+  /* Добавили врап если будут добавляться элементы, чтобы они переносились аккуратно на новую строку */
+  flex-wrap: wrap;
+  /* Добавили 40px сверху-вниз на случай если будут добавляться новые элементы */
+  gap: 40px 30px;
+}
+
+.chefs-item {
+  flex-basis: calc((100% - 30px) / 2);
+}
+.chef-card {
+  display: flex;
+  gap: 30px;
+}
+
+.chef-image {
+  border-radius: 4px 4px 4px 200px;
+  box-shadow: -16px 16px 0 0 var(--color-primary-light),
+    -16px 16px 0 2px var(--color-secondary-dark);
+}
+
 .chef-title {
   margin-bottom: 16px;
   font-weight: 600;
   font-size: 40px;
 }
 
+.chef-text p {
+  margin-bottom: 24px;
+}
+.chef-text p:last-child {
+  margin-bottom: 0;
+}
+
 /* Format Section */
+.formats-container {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
 .formats-list {
   display: flex;
   gap: 20px;
@@ -317,6 +354,8 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* Позволяет не сжимать элемент даже если не хватает места */
+  flex-shrink: 0;
   width: 44px;
   height: 44px;
   padding: 0;
@@ -333,10 +372,25 @@ ul {
 }
 
 /* Contact Section */
+.contact-section {
+  padding-bottom: 96px;
+}
+.contact-container {
+  display: flex;
+  gap: 32px;
+}
+
 .contact-title {
   margin-bottom: 16px;
 }
-/* ADdress */
+
+.contact-map {
+  flex-shrink: 0;
+  border-radius: 16px;
+  border: none;
+}
+
+/* Address */
 
 .address-link {
   color: var(--color-primary-light);
@@ -359,6 +413,30 @@ ul {
 .address-copyright {
   font-size: 14px;
   color: #a18268;
+}
+/* Footer */
+.footer {
+  padding: 32px 0;
+}
+.footer-container {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-nav,
+.footer-address {
+  display: flex;
+  flex-basis: 50%;
+  gap: 20px;
+}
+
+.footer-logo,
+.footer-menu {
+  flex-grow: 1;
+}
+.address-list,
+.address-info {
+  flex-grow: 1;
 }
 
 .footer {

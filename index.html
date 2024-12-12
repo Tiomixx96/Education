@@ -325,7 +325,7 @@
         <button class="modal-btn-close" type="button">Close</button>
         <h1>Замовити дзвінок</h1>
         <p>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
-        <form name="contact-form" autocomplete="off" novalidate>
+        <form name="contact-form" autocomplete="off">
           <div class="form-field">
             <label class="form-label hidden" for="user-name">Ім'я</label>
             <input
@@ -334,6 +334,9 @@
               name="user-name"
               id="user-name"
               placeholder="Ім'я"
+              minlength="2"
+              maxlength="20"
+              required
             />
           </div>
 
@@ -344,7 +347,9 @@
               type="tel"
               name="user-tel"
               id="user-tel"
+              pattern="^\+[0-9]{12}"
               placeholder="Телефон"
+              required
             />
           </div>
 
@@ -357,8 +362,21 @@
               name="user-email"
               id="user-email"
               placeholder="Електронна пошта"
+              required
             />
           </div>
+          <!-- <div class="checkbox">
+            <input
+              class="checkbox-input hidden"
+              type="checkbox"
+              id="terms-conditions"
+              name="terms-conditions"
+            />
+            <label class="checkbox-label" for="terms-conditions"
+              >Я точно погоджуюсь з політикою</label
+            >
+          </div> -->
+
           <!-- type="submit" для баттон отправляет данные на сервер. -->
           <button class="form-button button" type="submit">
             Замовити дзвінок

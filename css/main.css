@@ -1,30 +1,24 @@
+@charset "UTF-8";
 /* {
   border: 4px solid violet;
 } */
-
 /* Обращаемся к какому-то конкретному элементу ребенка */
 /* .main-section > h1 {
   border: 4px solid violet;
 
 } */
-
 /* Чаще всего используется подход через классы. Определяем класс <h1 class="main-header"> и обращаемся через .main-header */
 /* Почему-то копировало из фигмы background color, но что-бы текст отображался белым нужно было прописать color */
-
 /* focus это когда мы используем клаву для навигации и меняем при этом что-то при выделении или по клику на кнопку. Пока не кликнешь не по элементу. 
 Фокус обычно используется для полей ввода*/
-
 /* .button:focus {
   background-color: pink;
 } */
-
 /* Каскадность - механизм, который управляет конечными значениями свойст элемента, если к нему применяется несколько цсс правил. ТОЕСТЬ КТО ПОСЛЕДНИЙ - ТОТ И ВЫИГРЫВАЕТ!  
 - если к элементу применяется несколько правил то их свойства комбинируются
 - если правила имеют одинаковые свойства с разными значениями, то они конфликтуют.
 */
-
 /* убираем кружочки и вообще перечисление для UL элементов всех */
-
 @font-face {
   font-display: swap;
   font-family: "Poppins";
@@ -32,7 +26,6 @@
   font-weight: 300;
   src: url("../fonts/poppins-v21-latin-300.woff2") format("woff2");
 }
-
 @font-face {
   font-display: swap;
   font-family: "Poppins";
@@ -40,7 +33,6 @@
   font-weight: 400;
   src: url("../fonts/poppins-v21-latin-regular.woff2") format("woff2");
 }
-
 @font-face {
   font-display: swap;
   font-family: "Poppins";
@@ -48,7 +40,6 @@
   font-weight: 600;
   src: url("../fonts/poppins-v21-latin-600.woff2") format("woff2");
 }
-
 @font-face {
   font-display: swap;
   font-family: "Poppins";
@@ -56,7 +47,6 @@
   font-weight: 900;
   src: url("../fonts/poppins-v21-latin-900.woff2") format("woff2");
 }
-
 :root {
   --color-brand-normal: #819b57; /* HEX color value */ /* еще используется rgba где 4 парамента, последний прозрачность показівает 0/1. Используется на практике хекс и ргба */
   --color-primary-light: #faf4ea;
@@ -65,6 +55,7 @@
   --color-brand-light: #cfcfbc;
   --color-secondary-dark: #a18268;
 }
+
 address {
   font-style: normal;
 }
@@ -99,14 +90,17 @@ h6,
 p {
   margin-top: 0;
 }
+
 /* Задаем для всех ссылок чтобы кликабельная зона элемента 
 была равна элементу на котором располагается */
 a {
   display: inline-block;
 }
+
 .section {
   padding: 48px 0px;
 }
+
 /* GLOBAL STYLES */
 ul {
   list-style-type: none;
@@ -129,6 +123,7 @@ ul {
   margin: 0 auto;
   padding: 24px;
 }
+
 /* LINK  */
 .button {
   padding: 16px 32px;
@@ -151,6 +146,7 @@ ul {
   line-height: 1.5;
   transition: color 0.3s;
 }
+
 .link:hover {
   color: var(--color-brand-normal);
 }
@@ -163,33 +159,31 @@ ul {
   left: 0;
   width: 100%;
 }
+
 .header-container {
   display: flex;
   align-items: center;
   gap: 40px;
 }
+
 .header-nav {
   display: flex;
   align-items: center;
   flex-grow: 1;
   gap: 40px;
 }
+
 .header-menu {
   display: flex;
   gap: 64px;
   flex-grow: 1;
   justify-content: center;
 }
+
 /* HERO SECTION */
 .hero-section {
   padding: 272px 0px;
-  background-image: linear-gradient(
-      102.76deg,
-      rgba(18, 18, 17, 0.78) 2.03%,
-      rgba(18, 18, 17, 0.6) 58.46%,
-      rgba(18, 18, 17, 0) 90.36%
-    ),
-    url("../Images/hero-section-background.jpg");
+  background-image: linear-gradient(102.76deg, rgba(18, 18, 17, 0.78) 2.03%, rgba(18, 18, 17, 0.6) 58.46%, rgba(18, 18, 17, 0) 90.36%), url("../Images/hero-section-background.jpg");
   background-repeat: no-repeat;
   background-position: center top; /*смещение по x и y*/
   background-size: cover; /*по x и y. Для фоток используется редко. В основном ставим Cover*/
@@ -217,6 +211,7 @@ ul {
 .adventages-section {
   background-color: var(--color-brand-normal);
 }
+
 .advantages-list {
   display: flex;
   justify-content: space-between;
@@ -234,6 +229,7 @@ ul {
   font-weight: 900;
   line-height: 1.3;
 }
+
 .section-title.centered {
   text-align: center;
 }
@@ -246,14 +242,17 @@ ul {
 .traditions-section {
   padding-top: 96px;
 }
+
 .traditions-container {
   display: flex;
   justify-content: space-between;
   gap: 40px;
 }
+
 .traditions-title {
   margin-bottom: 42px;
 }
+
 .traditions-content {
   max-width: 710px;
 }
@@ -267,12 +266,12 @@ ul {
 .traditions-text .uppercase {
   text-transform: uppercase;
 }
+
 .traditions-text.limited {
   max-width: 335px;
 }
 
 /* chefs Section*/
-
 .chefs-title {
   position: relative;
   margin: 0 auto 80px;
@@ -286,9 +285,11 @@ ul {
   border: 2px solid var(--color-brand-light);
   content: "";
 }
+
 .chefs-title::before {
-  left: -0;
+  left: 0;
 }
+
 .chefs-title::after {
   right: 0;
 }
@@ -304,6 +305,7 @@ ul {
 .chefs-item {
   flex-basis: calc((100% - 30px) / 2);
 }
+
 .chef-card {
   display: flex;
   gap: 30px;
@@ -311,8 +313,7 @@ ul {
 
 .chef-image {
   border-radius: 4px 4px 4px 200px;
-  box-shadow: -16px 16px 0 0 var(--color-primary-light),
-    -16px 16px 0 2px var(--color-secondary-dark);
+  box-shadow: -16px 16px 0 0 var(--color-primary-light), -16px 16px 0 2px var(--color-secondary-dark);
 }
 
 .chef-title {
@@ -324,6 +325,7 @@ ul {
 .chef-text p {
   margin-bottom: 24px;
 }
+
 .chef-text p:last-child {
   margin-bottom: 0;
 }
@@ -340,6 +342,7 @@ ul {
   gap: 20px;
   flex-wrap: wrap;
 }
+
 .formats-item {
   flex-basis: calc((100% - 40px) / 3);
   /*Прописываем, чтобы поместить 3 карточки в ряд. Было бы 4 писали бы 4*/
@@ -348,31 +351,31 @@ ul {
 
 .format-card {
   height: 444px;
-  background-image: linear-gradient(
-    180deg,
-    rgba(49, 38, 26, 0) 55.21%,
-    rgba(49, 38, 26, 0.71) 72.92%,
-    var(--color-primary-dark) 100%
-  );
+  background-image: linear-gradient(180deg, rgba(49, 38, 26, 0) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, var(--color-primary-dark) 100%);
   padding: 24px;
   border: 1px, solid lightgray; /*Need to remove*/
   border-radius: 16px;
   transition: transform 0.3s;
 }
+
 .format-card:hover {
   transform: scale(1.05);
 }
+
 .formats-title {
   margin-bottom: 80px;
 }
+
 .format-title {
   font-weight: 600;
   font-size: 24px;
 }
+
 .format-text {
   font-weight: 300;
   font-size: 14px;
 }
+
 /* Carousel button */
 .carousel-button {
   display: flex;
@@ -390,10 +393,12 @@ ul {
   border: 1px solid var(--color-primary-dark);
   cursor: pointer;
 }
+
 .carousel-button:hover {
   background-color: var(--color-primary-dark);
   fill: var(--color-primary-light);
 }
+
 .carousel-button.next {
   transform: rotate(180deg);
 }
@@ -402,6 +407,7 @@ ul {
 .contact-section {
   padding-bottom: 96px;
 }
+
 .contact-container {
   display: flex;
   gap: 32px;
@@ -418,7 +424,6 @@ ul {
 }
 
 /* Address */
-
 .address-link {
   color: var(--color-primary-light);
   font-size: 16px;
@@ -429,10 +434,12 @@ ul {
 .address-link:hover {
   color: var(--color-brand-normal);
 }
+
 .address-icon {
   /* Используем фил чтобы заполнить цвет иконки */
   fill: var(--color-primary-light);
 }
+
 .address-icon:hover {
   fill: var(--color-brand-normal);
 }
@@ -441,6 +448,7 @@ ul {
   font-size: 14px;
   color: #a18268;
 }
+
 /* Footer */
 .footer {
   padding: 32px 0;
@@ -451,6 +459,7 @@ ul {
   background-size: cover;
   background-position: center;
 }
+
 .footer::before,
 .footer::after {
   position: absolute;
@@ -489,6 +498,7 @@ ul {
 .footer-menu {
   flex-grow: 1;
 }
+
 .address-list,
 .address-info {
   flex-grow: 1;
@@ -501,6 +511,7 @@ ul {
   margin: 10px auto;
   background-image: radial-gradient(yellow, blue);
 }
+
 .backdrop {
   padding: 20px 0;
   position: fixed;
@@ -514,6 +525,7 @@ ul {
   background-color: rgba(0, 0, 0, 0.5);
   transition: opacity 0.3s, visibility 0.3s;
 }
+
 .backdrop.is-hidden {
   /* Прозрачность 0 */
   opacity: 0;
@@ -522,6 +534,7 @@ ul {
   /* Не обрабатывает клики по окну */
   pointer-events: none;
 }
+
 .modal {
   position: relative;
   width: 100%;
@@ -546,16 +559,17 @@ ul {
   position: relative;
   margin-bottom: 32px;
 }
+
 .form-label {
   position: absolute;
   top: 16px;
   left: 42px;
 }
+
 /* Если какой-то элемент в фокусе то можем делать что-то внутри */
 /* .form-field:focus-within .form-label {
   transform: translate(-36px, -40px);
 } */
-
 .form-input {
   width: 100%;
   padding: 16px 42px;
@@ -564,13 +578,20 @@ ul {
   /* Делает фон инпута таким же как и фон окна. Тоесть прозранім */
   background-color: transparent;
   font-size: 16px;
-
   line-height: 1.17;
 }
+
 .form-input:focus {
   border-color: var(--color-brand-normal);
   /* Добавляем чтобы убрать толстую обводку и увидеть изменения при фокусе */
   outline: none;
+}
+
+.form-input::-moz-placeholder {
+  color: var(--color-secondary-dark);
+  font-size: 16px;
+  /* Потому что мы поделили  line-height указанный в фигме на 16*/
+  line-height: 1.17;
 }
 
 .form-input::placeholder {
@@ -579,6 +600,11 @@ ul {
   /* Потому что мы поделили  line-height указанный в фигме на 16*/
   line-height: 1.17;
 }
+
+.form-input:focus::-moz-placeholder {
+  color: var(--color-primary-dark);
+}
+
 .form-input:focus::placeholder {
   color: var(--color-primary-dark);
 }
@@ -598,34 +624,8 @@ ul {
   font-weight: 500;
   text-align: center;
 }
+
 .form-terms-link {
   color: var(--color-primary-dark);
   text-underline-offset: 2px;
-}
-
-/* .checkbox-input { */
-/* Убирает элемент. В данном случае чекбокс */
-/* appearance: none;
-} */
-/* Добавляем поведение для активного чекбокса. */
-/* .checkbox-input:checked + .checkbox-label::before {
-  background-color: green;
-}
-.checkbox {
-  position: relative;
-}
-.checkbox-label {
-  padding: 24px;
-}
-.checkbox-label::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-top: 5px;
-  width: 16px;
-  height: 16px;
-  border: 1px solid black;
-  border-radius: 2px; */
-/* Если псевдоєлемент то должно біть обязательно контент  */
-/* content: "";
-} */
+}/*# sourceMappingURL=main.css.map */

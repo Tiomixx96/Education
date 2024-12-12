@@ -602,30 +602,3 @@ ul {
   color: var(--color-primary-dark);
   text-underline-offset: 2px;
 }
-
-/* .checkbox-input { */
-/* Убирает элемент. В данном случае чекбокс */
-/* appearance: none;
-} */
-/* Добавляем поведение для активного чекбокса. */
-/* .checkbox-input:checked + .checkbox-label::before {
-  background-color: green;
-}
-.checkbox {
-  position: relative;
-}
-.checkbox-label {
-  padding: 24px;
-}
-.checkbox-label::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-top: 5px;
-  width: 16px;
-  height: 16px;
-  border: 1px solid black;
-  border-radius: 2px; */
-/* Если псевдоєлемент то должно біть обязательно контент  */
-/* content: "";
-} */

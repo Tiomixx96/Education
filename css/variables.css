@@ -1,0 +1,9 @@
+@charset "UTF-8";
+:root {
+  --color-brand-normal: #819b57; /* HEX color value */ /* еще используется rgba где 4 парамента, последний прозрачность показівает 0/1. Используется на практике хекс и ргба */
+  --color-primary-light: #faf4ea;
+  --color-primary-dark: #31261a;
+  --color-brand-dark: #465929;
+  --color-brand-light: #cfcfbc;
+  --color-secondary-dark: #a18268;
+}/*# sourceMappingURL=variables.css.map */

@@ -61,6 +61,7 @@ address {
 }
 
 /* Base */
+/* Base */
 *,
 *::after,
 *::before {
@@ -117,6 +118,10 @@ ul {
   overflow: hidden;
 }
 
+.section {
+  padding: 48px 0;
+}
+
 .container {
   width: 100%;
   max-width: 1288px;
@@ -124,7 +129,6 @@ ul {
   padding: 24px;
 }
 
-/* LINK  */
 .button {
   padding: 16px 32px;
   color: var(--color-primary-light);
@@ -140,6 +144,7 @@ ul {
   color: var(--color-brand-dark);
 }
 
+/* LINK  */
 .link {
   color: var(--color-primary-light);
   text-decoration: none;

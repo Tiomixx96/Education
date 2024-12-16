@@ -1,0 +1,19 @@
+.formats-container {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.formats-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.formats-item {
+  flex-basis: calc((100% - 40px) / 3);
+  /*Прописываем, чтобы поместить 3 карточки в ряд. Было бы 4 писали бы 4*/
+  /*Отнимаем 40рх от общей ширины так как тут Gap 20px на 2 єлемента*/
+}
+.formats-title {
+  margin-bottom: 80px;
+}

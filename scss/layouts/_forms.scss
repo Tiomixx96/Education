@@ -1,0 +1,60 @@
+.form-field {
+  position: relative;
+  margin-bottom: 32px;
+}
+.form-label {
+  position: absolute;
+  top: 16px;
+  left: 42px;
+}
+/* Если какой-то элемент в фокусе то можем делать что-то внутри */
+/* .form-field:focus-within .form-label {
+  transform: translate(-36px, -40px);
+} */
+
+.form-input {
+  width: 100%;
+  padding: 16px 42px;
+  border: 1px solid var(--color-secondary-dark);
+  border-radius: 8px;
+  /* Делает фон инпута таким же как и фон окна. Тоесть прозранім */
+  background-color: transparent;
+  font-size: 16px;
+
+  line-height: 1.17;
+}
+.form-input:focus {
+  border-color: var(--color-brand-normal);
+  /* Добавляем чтобы убрать толстую обводку и увидеть изменения при фокусе */
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: var(--color-secondary-dark);
+  font-size: 16px;
+  /* Потому что мы поделили  line-height указанный в фигме на 16*/
+  line-height: 1.17;
+}
+.form-input:focus::placeholder {
+  color: var(--color-primary-dark);
+}
+
+.form-button {
+  /* Для размещения кнопки по центру */
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+.form-terms {
+  max-width: 220px;
+  margin: 0 auto;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 500;
+  text-align: center;
+}
+.form-terms-link {
+  color: var(--color-primary-dark);
+  text-underline-offset: 2px;
+}

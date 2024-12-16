@@ -1,0 +1,23 @@
+.carousel-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Позволяет не сжимать элемент даже если не хватает места */
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background-color: transparent;
+  fill: var(--color-primary-dark);
+  /* Бордер-радиус 50% означает, что елемент польностью округлится */
+  border-radius: 50%;
+  border: 1px solid var(--color-primary-dark);
+  cursor: pointer;
+}
+.carousel-button:hover {
+  background-color: var(--color-primary-dark);
+  fill: var(--color-primary-light);
+}
+.carousel-button.next {
+  transform: rotate(180deg);
+}

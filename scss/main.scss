@@ -26,438 +26,50 @@
 /* убираем кружочки и вообще перечисление для UL элементов всех */
 
 @import "./utils/fonts";
-
 @import "./utils/variables";
-
-address {
-  font-style: normal;
-}
 
 /* Base */
 @import "./base";
 @import "./utils/utils";
-
-.section {
-  padding: 48px 0;
-}
-
-.container {
-  width: 100%;
-  max-width: 1288px;
-  margin: 0 auto;
-  padding: 24px;
-}
-
+@import "./layouts/container";
 @import "./components/buttons";
-
 /* LINK  */
 @import "./components/links";
-
 /* Header */
-@import "./components/header";
+@import "./layouts/header";
 /* HERO SECTION */
-@import "./components/hero-section";
+@import "./layouts/hero-section";
 /* advantages section */
-.adventages-section {
-  background-color: var(--color-brand-normal);
-}
-.advantages-list {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-.adventages-item {
-  color: var(--color-primary-light);
-  font-size: 20px;
-  font-weight: 300;
-}
-
-.section-title {
-  font-size: 64px;
-  font-weight: 900;
-  line-height: 1.3;
-}
-.section-title.centered {
-  text-align: center;
-}
-
-.section-title .accent {
-  color: var(--color-brand-dark);
-}
-
+@import "./layouts/advantages";
+// Section
+@import "./layouts/sections";
 /* Traditions Section */
-.traditions-section {
-  padding-top: 96px;
-}
-.traditions-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-}
-.traditions-title {
-  margin-bottom: 42px;
-}
-.traditions-content {
-  max-width: 710px;
-}
-
-/* white-space: nowrap;  помешает текст в один рядок без пепреносов*/
-.traditions-text .brand {
-  color: var(--color-brand-normal);
-  font-weight: 600;
-}
-
-.traditions-text .uppercase {
-  text-transform: uppercase;
-}
-.traditions-text.limited {
-  max-width: 335px;
-}
-
+@import "./layouts/traditions-section";
 /* chefs Section*/
-
-.chefs-title {
-  position: relative;
-  margin: 0 auto 80px;
-}
-
-.chefs-title::before,
-.chefs-title::after {
-  position: absolute;
-  bottom: 24px;
-  width: 352px;
-  border: 2px solid var(--color-brand-light);
-  content: "";
-}
-.chefs-title::before {
-  left: -0;
-}
-.chefs-title::after {
-  right: 0;
-}
-
-.chefs-list {
-  display: flex;
-  /* Добавили врап если будут добавляться элементы, чтобы они переносились аккуратно на новую строку */
-  flex-wrap: wrap;
-  /* Добавили 40px сверху-вниз на случай если будут добавляться новые элементы */
-  gap: 40px 30px;
-}
-
-.chefs-item {
-  flex-basis: calc((100% - 30px) / 2);
-}
-.chef-card {
-  display: flex;
-  gap: 30px;
-}
-
-.chef-image {
-  border-radius: 4px 4px 4px 200px;
-  box-shadow: -16px 16px 0 0 var(--color-primary-light),
-    -16px 16px 0 2px var(--color-secondary-dark);
-}
-
-.chef-title {
-  margin-bottom: 16px;
-  font-weight: 600;
-  font-size: 40px;
-}
-
-.chef-text p {
-  margin-bottom: 24px;
-}
-.chef-text p:last-child {
-  margin-bottom: 0;
-}
-
+@import "./layouts/chefs-section";
+@import "./components/chef-card";
 /* Format Section */
-.formats-container {
-  display: flex;
-  gap: 32px;
-  align-items: center;
-}
-
-.formats-list {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-.formats-item {
-  flex-basis: calc((100% - 40px) / 3);
-  /*Прописываем, чтобы поместить 3 карточки в ряд. Было бы 4 писали бы 4*/
-  /*Отнимаем 40рх от общей ширины так как тут Gap 20px на 2 єлемента*/
-}
-
-.format-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  height: 444px;
-  background-image: linear-gradient(
-    180deg,
-    rgba(49, 38, 26, 0) 55.21%,
-    rgba(49, 38, 26, 0.71) 72.92%,
-    var(--color-primary-dark) 100%
-  );
-  padding: 24px;
-  border: 1px, solid lightgray; /*Need to remove*/
-  border-radius: 16px;
-  transition: transform 0.3s;
-}
-.format-card:hover {
-  transform: scale(1.05);
-}
-.format-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.formats-title {
-  margin-bottom: 80px;
-}
-.format-title {
-  font-weight: 600;
-  font-size: 24px;
-  color: var(--color-primary-light);
-}
-.format-text {
-  font-weight: 300;
-  font-size: 14px;
-  color: var(--color-primary-light);
-}
+@import "./layouts/formats-section";
+@import "./components/format-card";
 /* Carousel button */
-.carousel-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* Позволяет не сжимать элемент даже если не хватает места */
-  flex-shrink: 0;
-  width: 44px;
-  height: 44px;
-  padding: 0;
-  background-color: transparent;
-  fill: var(--color-primary-dark);
-  /* Бордер-радиус 50% означает, что елемент польностью округлится */
-  border-radius: 50%;
-  border: 1px solid var(--color-primary-dark);
-  cursor: pointer;
-}
-.carousel-button:hover {
-  background-color: var(--color-primary-dark);
-  fill: var(--color-primary-light);
-}
-.carousel-button.next {
-  transform: rotate(180deg);
-}
-
+@import "./components/carousel-button";
 /* Contact Section */
-.contact-section {
-  padding-bottom: 96px;
-}
-.contact-container {
-  display: flex;
-  gap: 32px;
-}
+@import "./layouts/contact-section";
+/* Footer / Address */
+@import "./layouts/footer";
 
-.contact-title {
-  margin-bottom: 16px;
-}
+// Modal window
 
-.contact-map {
-  flex-shrink: 0;
-  border-radius: 16px;
-  border: none;
-}
-
-/* Address */
-
-.address-link {
-  color: var(--color-primary-light);
-  font-size: 16px;
-  font-weight: 300;
-  text-decoration: none; /* Убирает подчеркивания например на ссілках*/
-}
-
-.address-link:hover {
-  color: var(--color-brand-normal);
-}
-.address-icon {
-  /* Используем фил чтобы заполнить цвет иконки */
-  fill: var(--color-primary-light);
-}
-.address-icon:hover {
-  fill: var(--color-brand-normal);
-}
-
-.address-copyright {
-  font-size: 14px;
-  color: #a18268;
-}
-/* Footer */
-.footer {
-  padding: 32px 0;
-  position: relative;
-  background-image: url("../Images/footer-background.png"); /*в .png прозрачный фон*/
-  background-color: var(--color-primary-dark);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.footer::before,
-.footer::after {
-  position: absolute;
-  bottom: 0;
-  background-repeat: no-repeat;
-  content: "";
-}
-
-.footer::before {
-  width: 180px;
-  height: 120px;
-  left: 0;
-  background-image: url("../Images/decor-bread-small.png");
-}
-
-.footer::after {
-  width: 380px;
-  height: 190px;
-  right: 0;
-  background-image: url("../Images/decor-bread-large.png");
-}
-
-.footer-container {
-  display: flex;
-  gap: 20px;
-}
-
-.footer-nav,
-.footer-address {
-  display: flex;
-  flex-basis: 50%;
-  gap: 20px;
-}
-
-.footer-logo,
-.footer-menu {
-  flex-grow: 1;
-}
-.address-list,
-.address-info {
-  flex-grow: 1;
-}
-
-.test-box {
-  width: 300px;
-  height: 400px;
-  border: 1px solid black;
-  margin: 10px auto;
-  background-image: radial-gradient(yellow, blue);
-}
-.backdrop {
-  padding: 20px 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: opacity 0.3s, visibility 0.3s;
-}
-.backdrop.is-hidden {
-  /* Прозрачность 0 */
-  opacity: 0;
-  /* Скрывает окно */
-  visibility: hidden;
-  /* Не обрабатывает клики по окну */
-  pointer-events: none;
-}
-.modal {
-  position: relative;
-  width: 100%;
-  max-width: 880px;
-  height: 100%;
-  max-height: 880px;
-  padding: 128px;
-  background-color: var(--color-primary-light);
-  border-radius: 32px;
-  /* Задаем чтобы можно было скролить если контент не помещается */
-  overflow-y: auto;
-}
-
-.modal-btn-close {
-  position: absolute;
-  top: 40px;
-  right: 40px;
-}
+@import "./layouts/modal";
 
 /* Form */
-.form-field {
-  position: relative;
-  margin-bottom: 32px;
-}
-.form-label {
-  position: absolute;
-  top: 16px;
-  left: 42px;
-}
-/* Если какой-то элемент в фокусе то можем делать что-то внутри */
-/* .form-field:focus-within .form-label {
-  transform: translate(-36px, -40px);
-} */
+@import "./layouts/forms";
 
-.form-input {
-  width: 100%;
-  padding: 16px 42px;
-  border: 1px solid var(--color-secondary-dark);
-  border-radius: 8px;
-  /* Делает фон инпута таким же как и фон окна. Тоесть прозранім */
-  background-color: transparent;
-  font-size: 16px;
-
-  line-height: 1.17;
-}
-.form-input:focus {
-  border-color: var(--color-brand-normal);
-  /* Добавляем чтобы убрать толстую обводку и увидеть изменения при фокусе */
-  outline: none;
-}
-
-.form-input::placeholder {
-  color: var(--color-secondary-dark);
-  font-size: 16px;
-  /* Потому что мы поделили  line-height указанный в фигме на 16*/
-  line-height: 1.17;
-}
-.form-input:focus::placeholder {
-  color: var(--color-primary-dark);
-}
-
-.form-button {
-  /* Для размещения кнопки по центру */
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 24px;
-}
-
-.form-terms {
-  max-width: 220px;
-  margin: 0 auto;
-  font-size: 12px;
-  line-height: 1.5;
-  font-weight: 500;
-  text-align: center;
-}
-.form-terms-link {
-  color: var(--color-primary-dark);
-  text-underline-offset: 2px;
-}
+// Что-то тестовое
+// .test-box {
+//   width: 300px;
+//   height: 400px;
+//   border: 1px solid black;
+//   margin: 10px auto;
+//   background-image: radial-gradient(yellow, blue);
+// }

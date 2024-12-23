@@ -118,6 +118,22 @@ address {
   overflow: hidden;
 }
 
+.text-brand {
+  color: var(--color-brand-normal);
+}
+
+.text-brand-dark {
+  color: var(--color-brand-dark);
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
 .container {
   width: 100%;
   max-width: 1288px;
@@ -154,27 +170,24 @@ address {
 
 /* Header */
 .header {
-  padding-top: 32px;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  padding-top: 32px;
 }
-
-.header-container {
+.header__container {
   display: flex;
   align-items: center;
   gap: 40px;
 }
-
-.header-nav {
+.header__nav {
   display: flex;
   align-items: center;
   flex-grow: 1;
   gap: 40px;
 }
-
-.header-menu {
+.header__menu {
   display: flex;
   gap: 64px;
   flex-grow: 1;
@@ -190,8 +203,7 @@ address {
   background-size: cover; /*по x и y. Для фоток используется редко. В основном ставим Cover*/
   background-attachment: fixed;
 }
-
-.hero-title {
+.hero-section__title {
   margin-bottom: 0px;
   color: var(--color-primary-light);
   text-decoration: none;
@@ -204,22 +216,16 @@ address {
   /* word-spacing: -10px; расстояние между словами */
 }
 
-.hero-title .accent {
-  color: var(--color-brand-normal);
-}
-
 /* advantages section */
 .adventages-section {
   background-color: var(--color-brand-normal);
 }
-
-.advantages-list {
+.adventages-section__list {
   display: flex;
   justify-content: space-between;
   gap: 40px;
 }
-
-.adventages-item {
+.adventages-section__item {
   color: var(--color-primary-light);
   font-size: 20px;
   font-weight: 300;
@@ -228,86 +234,61 @@ address {
 .section {
   padding: 48px 0;
 }
-
-.section-title {
+.section__title {
   font-size: 64px;
   font-weight: 900;
   line-height: 1.3;
 }
-
-.section-title.centered {
+.section__title--centered {
   text-align: center;
-}
-
-.section-title .accent {
-  color: var(--color-brand-dark);
 }
 
 /* Traditions Section */
 .traditions-section {
   padding-top: 96px;
 }
-
-.traditions-container {
+.traditions-section__container {
   display: flex;
   justify-content: space-between;
   gap: 40px;
 }
-
-.traditions-title {
+.traditions-section__title {
   margin-bottom: 42px;
 }
-
-.traditions-content {
+.traditions-section__content {
   max-width: 710px;
 }
-
-/* white-space: nowrap;  помешает текст в один рядок без пепреносов*/
-.traditions-text .brand {
-  color: var(--color-brand-normal);
-  font-weight: 600;
-}
-
-.traditions-text .uppercase {
-  text-transform: uppercase;
-}
-
-.traditions-text.limited {
+.traditions-section__text--limited {
   max-width: 335px;
 }
 
+/* white-space: nowrap;  помешает текст в один рядок без пепреносов*/
 /* chefs Section*/
-.chefs-title {
+.chefs-section__title {
   position: relative;
   margin: 0 auto 80px;
 }
-
-.chefs-title::before,
-.chefs-title::after {
+.chefs-section__title::before, .chefs-section__title::after {
   position: absolute;
   bottom: 24px;
   width: 352px;
   border: 2px solid var(--color-brand-light);
   content: "";
 }
-
-.chefs-title::before {
+.chefs-section__title::before {
   left: 0;
 }
-
-.chefs-title::after {
+.chefs-section__title::after {
   right: 0;
 }
-
-.chefs-list {
+.chefs-section__list {
   display: flex;
   /* Добавили врап если будут добавляться элементы, чтобы они переносились аккуратно на новую строку */
   flex-wrap: wrap;
   /* Добавили 40px сверху-вниз на случай если будут добавляться новые элементы */
   gap: 40px 30px;
 }
-
-.chefs-item {
+.chefs-section__item {
   flex-basis: calc((100% - 30px) / 2);
 }
 
@@ -315,47 +296,40 @@ address {
   display: flex;
   gap: 30px;
 }
-
-.chef-image {
+.chef-card__image {
   border-radius: 4px 4px 4px 200px;
   box-shadow: -16px 16px 0 0 var(--color-primary-light), -16px 16px 0 2px var(--color-secondary-dark);
 }
-
-.chef-title {
+.chef-card__title {
   margin-bottom: 16px;
   font-weight: 600;
   font-size: 40px;
 }
-
-.chef-text p {
+.chef-card__text {
   margin-bottom: 24px;
 }
-
-.chef-text p:last-child {
+.chef-card__text:last-child {
   margin-bottom: 0;
 }
 
 /* Format Section */
-.formats-container {
+.formats-section__container {
   display: flex;
   gap: 32px;
   align-items: center;
 }
-
-.formats-list {
+.formats-section__title {
+  margin-bottom: 80px;
+}
+.formats-section__list {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
 }
-
-.formats-item {
+.formats-section__item {
   flex-basis: calc((100% - 40px) / 3);
   /*Прописываем, чтобы поместить 3 карточки в ряд. Было бы 4 писали бы 4*/
   /*Отнимаем 40рх от общей ширины так как тут Gap 20px на 2 єлемента*/
-}
-
-.formats-title {
-  margin-bottom: 80px;
 }
 
 .format-card {
@@ -370,12 +344,10 @@ address {
   border-radius: 16px;
   transition: transform 0.3s;
 }
-
 .format-card:hover {
   transform: scale(1.05);
 }
-
-.format-image {
+.format-card__image {
   position: absolute;
   top: 0;
   left: 0;
@@ -383,14 +355,12 @@ address {
   height: 100%;
   z-index: -1;
 }
-
-.format-title {
+.format-card__title {
   font-weight: 600;
   font-size: 24px;
   color: var(--color-primary-light);
 }
-
-.format-text {
+.format-card__text {
   font-weight: 300;
   font-size: 14px;
   color: var(--color-primary-light);
@@ -427,20 +397,25 @@ address {
 .contact-section {
   padding-bottom: 96px;
 }
-
-.contact-container {
+.contact-section__container {
   display: flex;
   gap: 32px;
 }
-
-.contact-title {
+.contact-section__title {
   margin-bottom: 16px;
 }
-
-.contact-map {
+.contact-section__form-field {
+  margin-bottom: 24px;
+}
+.contact-section__map {
   flex-shrink: 0;
   border-radius: 16px;
   border: none;
+}
+.contact-section__button {
+  /* Для размещения кнопки по центру */
+  display: block;
+  margin: 0 auto 16px;
 }
 
 /* Footer / Address */
@@ -523,6 +498,52 @@ address {
   flex-grow: 1;
 }
 
+.input {
+  position: relative;
+  /* Если какой-то элемент в фокусе то можем делать что-то внутри */
+  /* .form-field:focus-within .form-label {
+    transform: translate(-36px, -40px);
+  } */
+}
+.input__label {
+  position: absolute;
+  top: 16px;
+  left: 42px;
+}
+.input__control {
+  padding: 16px 42px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.17;
+  border: 1px solid var(--color-secondary-dark);
+  border-radius: 8px;
+  /* Делает фон инпута таким же как и фон окна. Тоесть прозранім */
+  background-color: transparent;
+}
+.input__control:focus {
+  border-color: var(--color-brand-normal);
+  /* Добавляем чтобы убрать толстую обводку и увидеть изменения при фокусе */
+  outline: none;
+}
+.input__control::-moz-placeholder {
+  color: var(--color-secondary-dark);
+  font-size: 16px;
+  /* Потому что мы поделили  line-height указанный в фигме на 16*/
+  line-height: 1.17;
+}
+.input__control::placeholder {
+  color: var(--color-secondary-dark);
+  font-size: 16px;
+  /* Потому что мы поделили  line-height указанный в фигме на 16*/
+  line-height: 1.17;
+}
+.input__control:focus::-moz-placeholder {
+  color: var(--color-primary-dark);
+}
+.input__control:focus::placeholder {
+  color: var(--color-primary-dark);
+}
+
 .backdrop {
   padding: 20px 0;
   position: fixed;
@@ -536,7 +557,6 @@ address {
   background-color: rgba(0, 0, 0, 0.5);
   transition: opacity 0.3s, visibility 0.3s;
 }
-
 .backdrop.is-hidden {
   /* Прозрачность 0 */
   opacity: 0;
@@ -558,75 +578,20 @@ address {
   /* Задаем чтобы можно было скролить если контент не помещается */
   overflow-y: auto;
 }
-
-.modal-btn-close {
+.modal__btn-close {
   position: absolute;
   top: 40px;
   right: 40px;
 }
-
-/* Form */
-.form-field {
-  position: relative;
+.modal__form-field {
   margin-bottom: 32px;
 }
-
-.form-label {
-  position: absolute;
-  top: 16px;
-  left: 42px;
-}
-
-/* Если какой-то элемент в фокусе то можем делать что-то внутри */
-/* .form-field:focus-within .form-label {
-  transform: translate(-36px, -40px);
-} */
-.form-input {
-  width: 100%;
-  padding: 16px 42px;
-  border: 1px solid var(--color-secondary-dark);
-  border-radius: 8px;
-  /* Делает фон инпута таким же как и фон окна. Тоесть прозранім */
-  background-color: transparent;
-  font-size: 16px;
-  line-height: 1.17;
-}
-
-.form-input:focus {
-  border-color: var(--color-brand-normal);
-  /* Добавляем чтобы убрать толстую обводку и увидеть изменения при фокусе */
-  outline: none;
-}
-
-.form-input::-moz-placeholder {
-  color: var(--color-secondary-dark);
-  font-size: 16px;
-  /* Потому что мы поделили  line-height указанный в фигме на 16*/
-  line-height: 1.17;
-}
-
-.form-input::placeholder {
-  color: var(--color-secondary-dark);
-  font-size: 16px;
-  /* Потому что мы поделили  line-height указанный в фигме на 16*/
-  line-height: 1.17;
-}
-
-.form-input:focus::-moz-placeholder {
-  color: var(--color-primary-dark);
-}
-
-.form-input:focus::placeholder {
-  color: var(--color-primary-dark);
-}
-
-.form-button {
-  /* Для размещения кнопки по центру */
+.modal__button {
   display: block;
-  margin: 0 auto;
-  margin-bottom: 24px;
+  margin: 0 auto 24px;
 }
 
+/* Form */
 .form-terms {
   max-width: 220px;
   margin: 0 auto;
@@ -635,8 +600,7 @@ address {
   font-weight: 500;
   text-align: center;
 }
-
-.form-terms-link {
+.form-terms__link {
   color: var(--color-primary-dark);
   text-underline-offset: 2px;
 }/*# sourceMappingURL=main.css.map */

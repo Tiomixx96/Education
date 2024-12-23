@@ -31,6 +31,7 @@
 /* Base */
 @import "./base";
 @import "./utils/utils";
+@import "./utils/texts";
 @import "./layouts/container";
 @import "./components/buttons";
 /* LINK  */
@@ -47,6 +48,7 @@
 @import "./layouts/traditions-section";
 /* chefs Section*/
 @import "./layouts/chefs-section";
+
 @import "./components/chef-card";
 /* Format Section */
 @import "./layouts/formats-section";
@@ -57,14 +59,13 @@
 @import "./layouts/contact-section";
 /* Footer / Address */
 @import "./layouts/footer";
-
+@import "./components/input";
 // Modal window
 
 @import "./layouts/modal";
 
 /* Form */
-@import "./layouts/forms";
-
+@import "./components/form-terms";
 // Что-то тестовое
 // .test-box {
 //   width: 300px;

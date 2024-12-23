@@ -11,21 +11,17 @@
   background-position: center top; /*смещение по x и y*/
   background-size: cover; /*по x и y. Для фоток используется редко. В основном ставим Cover*/
   background-attachment: fixed;
-}
 
-.hero-title {
-  margin-bottom: 0px;
-  color: var(--color-primary-light);
-  text-decoration: none;
-  text-align: center; /* заголовок будет по центру слева или справа */
-  font-size: 128px;
-  font-weight: 900;
-  /* text-transform: uppercase; Разный регистр. lowercase , capitalize - каждое слово с большой буквы */
-  /* text-shadow: 2px 2px 0px violet;   добавляет размытость тексту x,y,размытость, цвет */
-  /* letter-spacing: 0px;  расстояние между буквами*/
-  /* word-spacing: -10px; расстояние между словами */
-}
-
-.hero-title .accent {
-  color: var(--color-brand-normal);
+  &__title {
+    margin-bottom: 0px;
+    color: var(--color-primary-light);
+    text-decoration: none;
+    text-align: center; /* заголовок будет по центру слева или справа */
+    font-size: 128px;
+    font-weight: 900;
+    /* text-transform: uppercase; Разный регистр. lowercase , capitalize - каждое слово с большой буквы */
+    /* text-shadow: 2px 2px 0px violet;   добавляет размытость тексту x,y,размытость, цвет */
+    /* letter-spacing: 0px;  расстояние между буквами*/
+    /* word-spacing: -10px; расстояние между словами */
+  }
 }

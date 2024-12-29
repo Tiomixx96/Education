@@ -41,7 +41,7 @@
 /* HERO SECTION */
 @import "./layouts/hero-section";
 /* advantages section */
-@import "./layouts/advantages";
+@import "./layouts/advantages-section";
 // Section
 @import "./layouts/sections";
 /* Traditions Section */
@@ -53,6 +53,7 @@
 /* Format Section */
 @import "./layouts/formats-section";
 @import "./components/format-card";
+@import "./components/pagination";
 /* Carousel button */
 @import "./components/carousel-button";
 /* Contact Section */
@@ -61,7 +62,7 @@
 @import "./layouts/footer";
 @import "./components/input";
 // Modal window
-
+@import "./layouts/mobile-menu";
 @import "./layouts/modal";
 
 /* Form */

@@ -6,3 +6,8 @@
   --color-brand-light: #cfcfbc;
   --color-secondary-dark: #a18268;
 }
+
+// Breakpoints. Через $ можно задавать переменные в scss
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop: 1280px;

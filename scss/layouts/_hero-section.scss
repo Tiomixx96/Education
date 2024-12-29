@@ -1,5 +1,5 @@
 .hero-section {
-  padding: 272px 0px;
+  padding: 124px 0;
   background-image: linear-gradient(
       102.76deg,
       rgba(18, 18, 17, 0.78) 2.03%,
@@ -12,16 +12,47 @@
   background-size: cover; /*по x и y. Для фоток используется редко. В основном ставим Cover*/
   background-attachment: fixed;
 
+  // С помощью этого мы можем адаптировать изображение под разные плотности пикселей
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        102.76deg,
+        rgba(18, 18, 17, 0.78) 2.03%,
+        rgba(18, 18, 17, 0.6) 58.46%,
+        rgba(18, 18, 17, 0) 90.36%
+      ),
+      url("../Images/hero-section-background@2x.jpg");
+  }
+
+  @media screen and (min-width: $bp-desktop) {
+    padding: 272px 0;
+  }
+
   &__title {
-    margin-bottom: 0px;
+    margin-bottom: 48px;
     color: var(--color-primary-light);
     text-decoration: none;
     text-align: center; /* заголовок будет по центру слева или справа */
-    font-size: 128px;
+    font-size: 67px;
+    line-height: 1;
     font-weight: 900;
     /* text-transform: uppercase; Разный регистр. lowercase , capitalize - каждое слово с большой буквы */
     /* text-shadow: 2px 2px 0px violet;   добавляет размытость тексту x,y,размытость, цвет */
     /* letter-spacing: 0px;  расстояние между буквами*/
     /* word-spacing: -10px; расстояние между словами */
+
+    @media screen and (min-width: $bp-desktop) {
+      font-size: 128px;
+      line-height: 1.5;
+      margin-bottom: 0;
+    }
+  }
+
+  &__button {
+    margin: 0 auto;
+    @media screen and (min-width: $bp-desktop) {
+      display: none;
+    }
   }
 }

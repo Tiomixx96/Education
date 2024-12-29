@@ -1,5 +1,5 @@
 .backdrop {
-  padding: 20px 0;
+  padding: 20px;
   position: fixed;
   top: 0;
   left: 0;
@@ -27,11 +27,16 @@
   max-width: 880px;
   height: 100%;
   max-height: 880px;
-  padding: 128px;
+  padding: 48px;
   background-color: var(--color-primary-light);
   border-radius: 32px;
   /* Задаем чтобы можно было скролить если контент не помещается */
   overflow-y: auto;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding: 128px;
+  }
+
   &__btn-close {
     position: absolute;
     top: 40px;
@@ -43,7 +48,6 @@
   }
 
   &__button {
-    display: block;
     margin: 0 auto 24px;
   }
 }

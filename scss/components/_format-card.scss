@@ -13,11 +13,7 @@
   padding: 24px;
   border: 1px, solid lightgray; /*Need to remove*/
   border-radius: 16px;
-  transition: transform 0.3s;
-
-  &:hover {
-    transform: scale(1.05);
-  }
+  overflow: hidden;
 
   &__image {
     position: absolute;

@@ -1,20 +1,30 @@
 .formats-section {
-  &__container {
+  &__slider {
     display: flex;
-    gap: 32px;
     align-items: center;
+    gap: 32px;
   }
-  &__title {
-    margin-bottom: 80px;
+
+  &__container {
+    overflow: hidden;
   }
+
   &__list {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    margin-bottom: 32px;
   }
-  &__item {
-    flex-basis: calc((100% - 40px) / 3);
-    /*Прописываем, чтобы поместить 3 карточки в ряд. Было бы 4 писали бы 4*/
-    /*Отнимаем 40рх от общей ширины так как тут Gap 20px на 2 єлемента*/
+
+  // удалили так как подключили swiper
+  // &__item {
+  //   flex-basis: calc((100% - 40px) / 3);
+  //   /*Прописываем, чтобы поместить 3 карточки в ряд. Было бы 4 писали бы 4*/
+  //   /*Отнимаем 40рх от общей ширины так как тут Gap 20px на 2 єлемента*/
+  // }
+
+  &__button {
+    display: none;
+
+    @media screen and (min-width: $bp-tablet) {
+      display: flex;
+    }
   }
 }
